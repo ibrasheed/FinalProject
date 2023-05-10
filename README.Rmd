@@ -69,6 +69,24 @@ Running under: MacOS Ventura Version 13.1.
 -   wbstats_1.0.4
 
     \par
+    
+-   ggplot2_3.4.2
+
+    \par
+
+-   dplyr_1.1.2
+
+\par
+-   RColorBrewer_1.1-3
+
+\par
+-  sf_1.0-9
+
+\par
+
+
+
+    
 
 # FILE LIST
 
@@ -88,6 +106,8 @@ Running under: MacOS Ventura Version 13.1.
 
 5.  "forAnalysis.csv" is the final dataset after merging everything, i.e. after running "merging data.R"
 
+6.  afshape is the folder containing African countries shape files used for creating geographical maps.
+
 \bigskip
 
 **Code**
@@ -102,7 +122,19 @@ Running under: MacOS Ventura Version 13.1.
 
 4.  "merging data.R" is the R script that binds all three afrobarometer data from waves 5, 6, 7, and merges them with liberal democracy and corruption control data.
 
+5. "data-viz.R" is the R script for plotting the data
+
 \bigskip
+
+**Outputs**
+
+1. "corruptionmap3.pdf" is a geospatial map generated using ggplot. The codes for this plot are in "data-viz.R".  The map spaitially graphs corruption control by country.
+
+2. "controlmap-baseR.pdf" is a geospatial map generated using ggplot. The codes for this plot are "data-viz.R" The map spaitially graphs corruption control by country.
+
+
+
+
 
 **Documentation**
 
@@ -112,4 +144,5 @@ Running under: MacOS Ventura Version 13.1.
 
 # Project Update
 
-I have so far cleaned three waves of the afrobarometer survey and merged them with data from world bank and the varieties of democracy. From afrobarometer, I recoded waves 5, 6, and 7 into into values that would be meaningful for my analysis. Following that, I used worldbank api to download national level data for governments' control of corruption which I then merged with the cleaned afrobarometer data based on country. I also downloaded and merged liberal democracy index from v-dem and so I now have a dataset ready for analyses. In addition to running some analysis, I intend to do some data visualization.
+As of 10th May, 2023, I have updated this readme file to account for all documents and scripts in this project. 
+Note to colleagues: Please feel free to reach out to me if you spot any mistake or want to chat about my codes or the API that I used at ribrahim@nd.edu
